@@ -1,4 +1,3 @@
-/* Tổng thể */
 body {
   font-family: "Poppins", sans-serif;
   background-color: #e8e8e8;
@@ -6,7 +5,6 @@ body {
   margin: 0;
 }
 
-/* Sidebar */
 .sidebar {
   height: 100vh;
   background-color: #0d1b42;
@@ -53,41 +51,15 @@ body {
   bottom: 20px;
   width: calc(100% - 40px);
   margin: 0 20px;
+  padding: 15px;
 }
 
-/* User Profile trong Sidebar */
-.user-profile {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.user-profile img {
-  width: 80px;
-  height: 80px;
-  object-fit: cover;
-  border-radius: 50%;
-  display: block;
-  margin: 0 auto;
-}
-
-.user-profile p {
-  margin: 10px 0 5px;
-  font-size: 16px;
-}
-
-.user-profile small {
-  font-size: 12px;
-  color: #b0b0b0;
-}
-
-/* Nội dung chính */
 .content {
   margin-left: 250px;
   padding: 20px;
   min-height: 100vh;
 }
 
-/* Dashboard Header */
 .dashboard-header {
   background-color: #ffffff;
   padding: 15px 20px;
@@ -119,7 +91,6 @@ body {
   color: #343a40;
 }
 
-/* Cards thống kê */
 .stats-container {
   display: flex;
   justify-content: space-between;
@@ -172,7 +143,6 @@ body {
   background: #dc3545;
 }
 
-/* Bảng danh sách */
 .table-container {
   background-color: #ffffff;
   padding: 15px;
@@ -231,44 +201,4 @@ td {
 .status.warning {
   color: #ffca2c;
   font-weight: 600;
-}
-
-/* Nút trong bảng ManageTeacherProfiles */
-.btn-warning {
-  background-color: #ffc107;
-  border: none;
-  padding: 5px 15px;
-  font-size: 14px;
-}
-
-.btn-danger {
-  background-color: #dc3545;
-  border: none;
-  padding: 5px 15px;
-  font-size: 14px;
-}
-
-/* Modal */
-.modal-content {
-  border-radius: 8px;
-}
-
-.modal-header {
-  background-color: #f8f9fa;
-  border-bottom: 1px solid #ddd;
-}
-
-.modal-title {
-  font-size: 18px;
-  font-weight: 600;
-}
-
-.form-group label {
-  font-size: 14px;
-  font-weight: 600;
-}
-
-.form-control {
-  font-size: 14px;
-  padding: 8px 12px;
 }

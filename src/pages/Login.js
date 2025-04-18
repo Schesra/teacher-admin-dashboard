@@ -11,11 +11,9 @@ const Login = () => {
     const email = e.target.email.value.trim();
     const password = e.target.password.value.trim();
 
-    // Tạm kiểm tra cứng – sẽ thay bằng API thật sau
-    if (email === "teacher@example.com" && password === "123456") {
-      // Lưu trạng thái đăng nhập (ví dụ: lưu token vào localStorage)
-      localStorage.setItem("userToken", "example-token"); // Ví dụ: lưu token
-      navigate("/home"); // Điều hướng đến trang Home sau khi đăng nhập
+    if (email === "admin@example.com" && password === "123456") {
+      localStorage.setItem("userToken", "example-token");
+      navigate("/home");
     } else {
       setError("Thông tin đăng nhập không chính xác. Vui lòng thử lại.");
     }
@@ -27,9 +25,7 @@ const Login = () => {
         <div className="login-content">
           <h2>Đăng Nhập</h2>
           <p>Vui lòng nhập thông tin để truy cập hệ thống.</p>
-
           {error && <div className="alert alert-danger">{error}</div>}
-
           <form onSubmit={handleLogin}>
             <div className="form-group">
               <label htmlFor="email">Địa chỉ Email</label>
@@ -42,7 +38,6 @@ const Login = () => {
                 required
               />
             </div>
-
             <div className="form-group">
               <label htmlFor="password">Mật khẩu</label>
               <input
@@ -54,22 +49,18 @@ const Login = () => {
                 required
               />
             </div>
-
             <div className="form-check">
               <label>
-                <input type="checkbox" />
-                Ghi nhớ đăng nhập
+                <input type="checkbox" /> Ghi nhớ đăng nhập
               </label>
               <a href="#" onClick={() => alert("Liên hệ Admin")}>
                 Quên mật khẩu?
               </a>
             </div>
-
             <button type="submit" className="btn-primary">
               Đăng Nhập
             </button>
           </form>
-
           <div className="text-center">
             <span>Chưa có tài khoản? </span>
             <a href="#" onClick={() => alert("Liên hệ quản trị viên")}>
@@ -78,7 +69,6 @@ const Login = () => {
           </div>
         </div>
       </div>
-
       <div className="login-right"></div>
     </div>
   );

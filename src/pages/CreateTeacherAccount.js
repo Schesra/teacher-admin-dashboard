@@ -48,12 +48,7 @@ const CreateTeacherAccount = () => {
       <div className="content">
         <div className="dashboard-header">
           <h3>Tạo Tài Khoản Giáo Viên</h3>
-          <input
-            type="text"
-            className="search-box"
-            placeholder="Tìm kiếm..."
-            style={{ visibility: "hidden" }}
-          />
+          <input type="text" className="search-box" placeholder="Tìm kiếm..." />
           <div className="icons">
             <i className="fa fa-bell"></i>
             <i className="fa fa-envelope"></i>
