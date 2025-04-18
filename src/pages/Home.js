@@ -52,7 +52,7 @@ const Home = () => {
             className="stat-card blue"
             onClick={() => (window.location.href = "/create-teacher-account")}
           >
-            <i className="fa fa-envelope"></i>
+            <i className="fa fa-user-plus"></i> {/* Thay đổi icon */}
             <h4>4</h4>
             <p>Tạo tài khoản</p>
           </div>
@@ -76,7 +76,8 @@ const Home = () => {
                   <td>Đang làm việc</td>
                   <td>
                     <button className="view-btn">Xem</button>
-                  </td>
+                  </td>{" "}
+                  {/* Không có icon, khớp với ảnh */}
                 </tr>
                 <tr>
                   <td>Trần Thị B</td>
@@ -84,7 +85,8 @@ const Home = () => {
                   <td>Nghỉ phép</td>
                   <td>
                     <button className="view-btn">Xem</button>
-                  </td>
+                  </td>{" "}
+                  {/* Không có icon, khớp với ảnh */}
                 </tr>
               </tbody>
             </table>

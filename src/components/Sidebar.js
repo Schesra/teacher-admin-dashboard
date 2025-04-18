@@ -1,38 +1,52 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom"; // Thêm useNavigate
 import "font-awesome/css/font-awesome.min.css";
 import "../css/home.css";
 
 const Sidebar = () => {
+  const navigate = useNavigate(); // Hook để điều hướng
+
+  const handleLogout = () => {
+    // Xóa trạng thái đăng nhập (nếu có, ví dụ: xóa token trong localStorage)
+    localStorage.removeItem("userToken"); // Ví dụ: xóa token (nếu bạn sử dụng)
+
+    // Điều hướng về trang đăng nhập
+    navigate("/login");
+  };
+
   return (
     <div className="sidebar">
       <h2>Admin Panel</h2>
       <div className="user-profile">
-        <img src="/img/Admin.jpg" alt="Admin Avatar" />
+        <img src="//public/Admin.jpg" alt="Admin Avatar" />
         <p>Aman Admin</p>
         <small>Quản trị viên</small>
       </div>
-      <NavLink exact to="/" activeClassName="active">
+      <NavLink to="/home" activeClassName="active">
         <i className="fa fa-home"></i> Trang chủ
       </NavLink>
       <NavLink to="/manage-teacher-profiles" activeClassName="active">
         <i className="fa fa-user"></i> Hồ sơ Giáo Viên
       </NavLink>
       <NavLink to="/view-teacher-attendance">
-        <i className="fa fa-calendar-check"></i> Điểm Danh
+        <i className="fa fa-check-square"></i> Điểm Danh
       </NavLink>
       <NavLink to="/send-announcements">
         <i className="fa fa-bullhorn"></i> Thông Báo
       </NavLink>
       <NavLink to="/manage-teacher-transfers">
-        <i className="fa fa-exchange-alt"></i> Chuyển Công Tác
+        <i className="fa fa-exchange"></i> Chuyển Công Tác
       </NavLink>
       <NavLink to="/generate-reports">
-        <i className="fa fa-chart-bar"></i> Báo Cáo
+        <i className="fa fa-bar-chart"></i> Báo Cáo
       </NavLink>
-      <NavLink to="/teacher-login" className="logout">
-        <i className="fa fa-sign-out-alt"></i> Đăng xuất
-      </NavLink>
+      <div
+        onClick={handleLogout}
+        className="logout"
+        style={{ cursor: "pointer" }}
+      >
+        <i className="fa fa-sign-out"></i> Đăng xuất
+      </div>
     </div>
   );
 };
